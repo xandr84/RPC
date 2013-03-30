@@ -1,8 +1,8 @@
 ﻿#pragma once
 
-#include "transport.h"
+#include "asio_transport.h"
 
-class ActorClient : public DualRPC::Client
+class ActorClient : public DualRPC::AsioClient
 {
 public:
 	ActorClient(boost::asio::io_service &iosvc, DualRPC::ObjectsStorage &storage);

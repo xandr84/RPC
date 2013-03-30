@@ -72,7 +72,9 @@
     <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="asio_transport.h" />
     <ClInclude Include="defs.h" />
+    <ClInclude Include="future_result.h" />
     <ClInclude Include="logger.h" />
     <ClInclude Include="objects.h" />
     <ClInclude Include="stdafx.h" />
@@ -81,6 +83,8 @@
     <ClInclude Include="variant.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="asio_transport.cpp" />
+    <ClCompile Include="future_result.cpp" />
     <ClCompile Include="logger.cpp" />
     <ClCompile Include="objects.cpp" />
     <ClCompile Include="stdafx.cpp">

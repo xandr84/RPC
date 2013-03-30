@@ -3,7 +3,7 @@
 #include "stdafx.h"
 #include "variant.h"
 #include "objects.h"
-#include "transport.h"
+#include "asio_transport.h"
 #include "logger.h"
 
 #include <iostream>
@@ -66,8 +66,8 @@ void testSyncServer()
 	IObjectPtr obj(new TestObject(io_service));
 	storage.registerObject(obj, ClientBasePtr(), true);
 	
-	Server server(io_service, storage);
-	server.listenTcp("127.0.0.1", 6000);
+	AsioServer server(io_service, storage);
+	server.listen("127.0.0.1", 6000);
 }
 
 void testAsyncServer()
@@ -77,8 +77,8 @@ void testAsyncServer()
 	IObjectPtr obj(new TestObject(io_service));
 	storage.registerObject(obj, ClientBasePtr(), true);
 	
-	Server server(io_service, storage);
-	server.asyncListenTcp("127.0.0.1", 6000);
+	AsioServer server(io_service, storage);
+	server.listen("127.0.0.1", 6000);
 	io_service.run();
 }
 

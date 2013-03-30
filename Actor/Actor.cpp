@@ -8,7 +8,7 @@
 #include "FileSystemObject.h"
 
 ActorClient::ActorClient(boost::asio::io_service &iosvc, DualRPC::ObjectsStorage &storage) : 
-	Client(iosvc, storage) 
+	AsioClient(iosvc, storage) 
 {
 }
 

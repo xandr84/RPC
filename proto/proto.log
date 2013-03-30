@@ -1,9 +1,10 @@
-2013-03-22 21:44:38 INFO Start async listening on 127.0.0.1:6000 | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::Server::asyncListenTcp): line 827
-2013-03-22 21:44:38 DEBUG ClientSession create 13919385413203124852 | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientSession::ClientSession): line 704
-2013-03-22 21:44:40 INFO New client accepted 127.0.0.1 | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::Server::handleAccept): line 857
-2013-03-22 21:44:40 DEBUG ClientSession create 3051946877729692768 | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientSession::ClientSession): line 704
-2013-03-22 21:44:40 DEBUG Send session 13919385413203124852 to client | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::Server::moveConnectionToSession): line 881
-2013-03-22 21:44:46 DEBUG Receive request 1 call <object id 0>.foo(object(id=100)) | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::processAnswer): line 403
-2013-03-22 21:44:48 DEBUG Async call <object id 100>.boo({"name" : string(len=6, data="Sergey")}) | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::asyncCall): line 108
-2013-03-22 21:45:08 DEBUG Receive answer on request 1 value {"fam" : string(len=6, data="Ivanov"), "name" : string(len=6, data="Sergey")} | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::processAnswer): line 377
-2013-03-22 21:49:22 DEBUG Send return response on request 1 value {"fam" : string(len=6, data="Ivanov"), "name" : string(len=6, data="Sergey"), "otch" : string(len=9, data="Petrovich")} | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::sendReturnResponse): line 222
+2013-03-30 22:23:27 INFO Start async listening on 127.0.0.1:6000 | d:\projects\rpc\dualrpc\asio_transport.cpp (DualRPC::AsioServer::listen): line 485
+2013-03-30 22:23:27 DEBUG ClientSession create 647228952601238166 | d:\projects\rpc\dualrpc\asio_transport.cpp (DualRPC::AsioClientSession::AsioClientSession): line 359
+2013-03-30 22:23:34 INFO New client accepted 127.0.0.1 | d:\projects\rpc\dualrpc\asio_transport.cpp (DualRPC::AsioServer::handleAccept): line 515
+2013-03-30 22:23:34 DEBUG ClientSession create 17944699224714400469 | d:\projects\rpc\dualrpc\asio_transport.cpp (DualRPC::AsioClientSession::AsioClientSession): line 359
+2013-03-30 22:23:34 DEBUG Send session 647228952601238166 to client | d:\projects\rpc\dualrpc\asio_transport.cpp (DualRPC::AsioServer::moveConnectionToSession): line 539
+2013-03-30 22:23:34 DEBUG Receive request 1 call <object id 0>.foo(object(addr=0x28903B0)) | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::processInput): line 311
+2013-03-30 22:23:34 DEBUG Async call <object id 100>.boo({"name" : string[6]="Sergey")}) | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::asyncCall): line 75
+2013-03-30 22:23:34 DEBUG Receive answer on request 1 value {"fam" : string[6]="Ivanov"), "name" : string[6]="Sergey")} | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::processInput): line 283
+2013-03-30 22:23:34 DEBUG Send return response on request 1 value {"fam" : string[6]="Ivanov"), "name" : string[6]="Sergey"), "otch" : string[9]="Petrovich")} | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::sendReturnResponse): line 175
+2013-03-30 22:23:56 ERROR Client session message 'Удаленный хост принудительно разорвал существующее подключение' | d:\projects\rpc\dualrpc\asio_transport.cpp (DualRPC::AsioClientSession::handleError): line 402

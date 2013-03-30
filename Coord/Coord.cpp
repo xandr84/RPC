@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#include "transport.h"
+#include "asio_transport.h"
 #include "logger.h"
 #include "ServerObject.h"
 #include "sqlite3.h"
@@ -44,9 +44,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	GlobalServerObjectPtr so(new GlobalServerObject());
 	storage.registerObject(so, nullptr, true);
 
-	DualRPC::Server server(io_service, storage);
+	DualRPC::AsioServer server(io_service, storage);
 	server.setMaxMessageSize(50*1024*1024);
-	server.asyncListenTcp("0.0.0.0", 6000);
+	server.listen("0.0.0.0", 6000);
 
 	io_service.run();
 	return 0;

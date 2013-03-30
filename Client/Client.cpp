@@ -7,7 +7,7 @@
 
 #include "variant.h"
 #include "objects.h"
-#include "transport.h"
+#include "asio_transport.h"
 #include "logger.h"
 
 
@@ -27,11 +27,11 @@ public:
 	}
 };
 
-class MyClient : public Client
+class MyClient : public AsioClient
 {
 public:
 	MyClient(aio::io_service &iosvc, ObjectsStorage &storage) : 
-		Client(iosvc, storage) 
+		AsioClient(iosvc, storage) 
 	{
 	}
 
@@ -53,7 +53,7 @@ void testSyncClient()
 {
 	ObjectsStorage storage;
 	aio::io_service io_service;	
-	ClientPtr client(new Client(io_service, storage));
+	AsioClientPtr client(new AsioClient(io_service, storage));
 	client->setEndpoint("127.0.0.1", 6000);
 	client->connectTcp();
 
@@ -75,7 +75,7 @@ void testAsyncClient()
 {
 	ObjectsStorage storage;
 	aio::io_service io_service;	
-	ClientPtr client(new MyClient(io_service, storage));
+	AsioClientPtr client(new MyClient(io_service, storage));
 	client->setEndpoint("127.0.0.1", 6000);
 	client->connectTcp();	
 	io_service.run();
