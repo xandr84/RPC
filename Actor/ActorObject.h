@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 
 #include "objects.h"
 
@@ -26,16 +26,16 @@ public:
 
 	DualRPC::Variant enumFactories(const DualRPC::Variant &args);
 	/*
-	Перечисляет имеющиеся фабрики.
-	Входной параметр: null
-	Выходной параметр: array of string		
+	РџРµСЂРµС‡РёСЃР»СЏРµС‚ РёРјРµСЋС‰РёРµСЃСЏ С„Р°Р±СЂРёРєРё.
+	Р’С…РѕРґРЅРѕР№ РїР°СЂР°РјРµС‚СЂ: null
+	Р’С‹С…РѕРґРЅРѕР№ РїР°СЂР°РјРµС‚СЂ: array of string		
 	*/
 
 	DualRPC::Variant createObject(const DualRPC::Variant &args);
 	/*
-	Создает объект заданной фабрики.
-	Входной параметр: string
-	Выходной параметр: object	
+	РЎРѕР·РґР°РµС‚ РѕР±СЉРµРєС‚ Р·Р°РґР°РЅРЅРѕР№ С„Р°Р±СЂРёРєРё.
+	Р’С…РѕРґРЅРѕР№ РїР°СЂР°РјРµС‚СЂ: string
+	Р’С‹С…РѕРґРЅРѕР№ РїР°СЂР°РјРµС‚СЂ: object	
 	*/
 
 private:

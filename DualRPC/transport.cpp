@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "transport.h"
 #include "objects.h"
 #include "logger.h"
@@ -409,7 +409,7 @@ bool ClientBase::processAnswer(Variant &result)
 			if(result.isException())
 				throw result.toException();
 		}
-		return true;  //Ðåçóëüòàò âûçîâà îáðàáîòàí
+		return true;  //Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ð²Ñ‹Ð·Ð¾Ð²Ð° Ð¾Ð±Ñ€Ð°Ð±Ð¾Ñ‚Ð°Ð½
 	}
 	else
 	if(type == RT_CALL_PROC || type == RT_CALL_FUNC)
@@ -433,7 +433,7 @@ bool ClientBase::processAnswer(Variant &result)
 		if(type == RT_CALL_FUNC)
 		{			
 			result = m_storage.localCall(id, name, args, true, -1, written);
-			if(written)	//Îòëîæåííûé ðåçóëüòàò óäàëåííîãî òðàíçèòíîãî âûçîâà
+			if(written)	//ÐžÑ‚Ð»Ð¾Ð¶ÐµÐ½Ð½Ñ‹Ð¹ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ ÑƒÐ´Ð°Ð»ÐµÐ½Ð½Ð¾Ð³Ð¾ Ñ‚Ñ€Ð°Ð½Ð·Ð¸Ñ‚Ð½Ð¾Ð³Ð¾ Ð²Ñ‹Ð·Ð¾Ð²Ð°
 			{
 				written->addCallback(boost::bind(&ClientBase::startReadSize, 
 					shared_from_this(), Variant()));
@@ -444,14 +444,14 @@ bool ClientBase::processAnswer(Variant &result)
 				return false;
 			}
 
-			if(result.isFuture())	//Îòëîæåííûé ðåçóëüòàò ëîêàëüíîãî âûçîâà 
+			if(result.isFuture())	//ÐžÑ‚Ð»Ð¾Ð¶ÐµÐ½Ð½Ñ‹Ð¹ Ñ€ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ð»Ð¾ÐºÐ°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ð²Ñ‹Ð·Ð¾Ð²Ð° 
 			{
 				FutureResultPtr f = result.toFuture();
 				f->addBoth(boost::bind(&ClientBase::disableProcessing, 
 					shared_from_this(), requestID, _1));				
 				return true;
 			}			
-			else //Ðåçóëüòàò ëîêàëüíîãî âûçîâà
+			else //Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ð»Ð¾ÐºÐ°Ð»ÑŒÐ½Ð¾Ð³Ð¾ Ð²Ñ‹Ð·Ð¾Ð²Ð°
 			{		
 				FutureResultPtr f = sendReturnResponse(requestID, result).toFuture();
 				f->addCallback(boost::bind(&ClientBase::startReadSize, 
