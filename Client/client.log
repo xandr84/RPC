@@ -1,0 +1,6 @@
+2013-03-22 21:20:24 INFO Connecting to 127.0.0.1:6000 | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::Client::asyncConnectTcp): line 560
+2013-03-22 21:20:24 INFO Successfull connected | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::Client::handleConnect): line 606
+2013-03-22 21:20:24 DEBUG Receive session 16960454011079452841 | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::Client::handleReadSession): line 669
+2013-03-22 21:20:24 DEBUG Async call <object id 0>.foo(object(addr=0x581D38)) | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::asyncCall): line 108
+2013-03-22 21:21:09 DEBUG Receive request 1 call <object id 100>.boo({"name" : string(len=6, data="Sergey")}) | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::processAnswer): line 407
+2013-03-22 21:23:06 DEBUG Send return response on request 1 value {"fam" : string(len=6, data="Ivanov"), "name" : string(len=6, data="Sergey")} | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::sendReturnResponse): line 222

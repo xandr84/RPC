@@ -1,0 +1,9 @@
+2013-03-22 21:44:38 INFO Start async listening on 127.0.0.1:6000 | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::Server::asyncListenTcp): line 827
+2013-03-22 21:44:38 DEBUG ClientSession create 13919385413203124852 | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientSession::ClientSession): line 704
+2013-03-22 21:44:40 INFO New client accepted 127.0.0.1 | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::Server::handleAccept): line 857
+2013-03-22 21:44:40 DEBUG ClientSession create 3051946877729692768 | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientSession::ClientSession): line 704
+2013-03-22 21:44:40 DEBUG Send session 13919385413203124852 to client | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::Server::moveConnectionToSession): line 881
+2013-03-22 21:44:46 DEBUG Receive request 1 call <object id 0>.foo(object(id=100)) | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::processAnswer): line 403
+2013-03-22 21:44:48 DEBUG Async call <object id 100>.boo({"name" : string(len=6, data="Sergey")}) | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::asyncCall): line 108
+2013-03-22 21:45:08 DEBUG Receive answer on request 1 value {"fam" : string(len=6, data="Ivanov"), "name" : string(len=6, data="Sergey")} | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::processAnswer): line 377
+2013-03-22 21:49:22 DEBUG Send return response on request 1 value {"fam" : string(len=6, data="Ivanov"), "name" : string(len=6, data="Sergey"), "otch" : string(len=9, data="Petrovich")} | d:\projects\rpc\dualrpc\transport.cpp (DualRPC::ClientBase::sendReturnResponse): line 222
